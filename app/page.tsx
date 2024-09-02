@@ -14,10 +14,12 @@ import { useUser } from '@auth0/nextjs-auth0/client'
 const firstFont = Jersey_10({
   subsets: ['latin'],
   weight: ['400'],
+  display: 'swap',
 })
 const secondFont = Jersey_15({
   subsets: ['latin'],
   weight: ['400'],
+  display: 'swap',
 })
 export default function Home() {
   const [immagine, setImmagine] = useState<any>('')
