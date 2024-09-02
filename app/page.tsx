@@ -5,18 +5,18 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Button, Form, message } from 'antd'
 import picdefault from '../public/defaultimage.webp'
-import { Jersey_10, Jersey_15 } from 'next/font/google'
+import { Shadows_Into_Light } from 'next/font/google'
 import { useRecoilState } from 'recoil'
 import { profileAtom } from '@/atoms/profileAtom'
 import { getProfile } from '@/lib/functions'
 import { refetchCreditsAtom } from '@/atoms/flagAtom'
 import { useUser } from '@auth0/nextjs-auth0/client'
-const firstFont = Jersey_10({
+const firstFont = Shadows_Into_Light({
   subsets: ['latin'],
   weight: ['400'],
   display: 'swap',
 })
-const secondFont = Jersey_15({
+const secondFont = Shadows_Into_Light({
   subsets: ['latin'],
   weight: ['400'],
   display: 'swap',
