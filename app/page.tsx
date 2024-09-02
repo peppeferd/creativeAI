@@ -1,6 +1,5 @@
 'use client'
 
-import { generatePost, saveImage } from '@/lib'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Button, Form, message } from 'antd'
@@ -40,6 +39,16 @@ export default function Home() {
     }
     if (user) fetchProfile()
   }, [setProfile, user, setRefetchCredits])
+
+  async function generatePost(postPrompt: PostPrompt) {
+    return await fetch('/api/imagegenerator', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(postPrompt),
+    })
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     setLoading(true)
