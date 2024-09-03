@@ -1,9 +1,9 @@
-import { atom } from "recoil";
+import { atom } from 'recoil'
 
 export const profileAtom = atom({
-  key: "profileAtom",
+  key: 'profileAtom',
   default: {
     credits: 0,
-    uid: "",
+    uid: '',
   } as Profile,
-});
+})
