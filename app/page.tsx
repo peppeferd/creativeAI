@@ -242,6 +242,12 @@ export default function Home() {
   return (
     <div className="pt-20 min-h-[200vh] bg-indigo-800 justify-center items-center text-center">
       <title>Creative AI - Home</title>
+      <head>
+        <meta
+          property="og:image"
+          content="https://og-examples.vercel.sh/api/static"
+        />
+      </head>
       <div className="mx-2">
         <h1
           className={`bg-orange-300 text-3xl text-indigo-800 p-4 rounded-2xl w-fit mb-16 mx-auto text-center ${firstFont.className}`}
