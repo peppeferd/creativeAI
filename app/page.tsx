@@ -10,6 +10,7 @@ import { profileAtom } from '@/atoms/profileAtom'
 import { getProfile } from '@/lib/functions'
 import { refetchCreditsAtom } from '@/atoms/flagAtom'
 import { useUser } from '@auth0/nextjs-auth0/client'
+import { generatePost } from '@/lib'
 const firstFont = Shadows_Into_Light({
   subsets: ['latin'],
   weight: ['400'],
@@ -39,16 +40,6 @@ export default function Home() {
     }
     if (user) fetchProfile()
   }, [setProfile, user, setRefetchCredits])
-
-  async function generatePost(postPrompt: PostPrompt) {
-    return await fetch('/api/imagegenerator', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(postPrompt),
-    })
-  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     setLoading(true)

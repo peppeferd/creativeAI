@@ -1,4 +1,4 @@
-/* export async function generatePost(postPrompt: PostPrompt) {
+export async function generatePost(postPrompt: PostPrompt) {
   return await fetch('/api/imagegenerator', {
     method: 'POST',
     headers: {
@@ -7,7 +7,6 @@
     body: JSON.stringify(postPrompt),
   })
 }
- */
 
 export async function saveImage(postImage: CustomersImages) {
   return await fetch('/api/userimages', {
