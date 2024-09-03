@@ -245,7 +245,7 @@ export default function Home() {
       <head>
         <meta
           property="og:image"
-          content="https://og-examples.vercel.sh/api/static"
+          content="https://raw.githubusercontent.com/peppeferd/creativeAI/master/app/favicon.ico"
         />
       </head>
       <div className="mx-2">
