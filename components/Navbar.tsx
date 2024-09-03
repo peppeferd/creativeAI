@@ -198,7 +198,7 @@ const Navbar = () => {
                   </a>
                 </div>
               ) : (
-                <div>
+                <div className="text-center">
                   <a
                     className="btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static"
                     href="/api/auth/login"
