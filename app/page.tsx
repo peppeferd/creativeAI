@@ -11,6 +11,30 @@ import { getProfile } from '@/lib/functions'
 import { refetchCreditsAtom } from '@/atoms/flagAtom'
 import { useUser } from '@auth0/nextjs-auth0/client'
 import { generatePost } from '@/lib'
+import futuramaLogo from '../public/icons8-futurama-friggere-50.png'
+import naturalLogo from '../public/icons8-anime-100.png'
+import duedLogo from '../public/icons8-ciglia-2d-48.png'
+import tredLogo from '../public/icons8-sincronizzare-94.png'
+import cyberneticLogo from '../public/icons8-cybernetic-64.png'
+import landscapeLogo from '../public/icons8-paesaggio-40.png'
+import floralLogo from '../public/icons8-floral-32.png'
+import whiteblackLogo from '../public/icons8-bianco-e-nero-80.png'
+import punkLogo from '../public/icons8-punk-64.png'
+import bloodyLogo from '../public/icons8-bloody-85.png'
+import techLogo from '../public/icons8-tech-50.png'
+import tropicalLogo from '../public/icons8-spiaggia-50.png'
+import portraitLogo from '../public/icons8-ritratto-40.png'
+import paintingLogo from '../public/fsafs.png'
+import mosaicLogo from '../public/icons8-arte-moderna-48.png'
+import cartoonLogo from '../public/icons8-čeburaška-48.png'
+import darkLogo from '../public/icons8-dark-85.png'
+import musicalLogo from '../public/icons8-musicale-80.png'
+import smileLogo from '../public/icons8-felice-48.png'
+import oldLogo from '../public/icons8-persona-anziana-maschio-tipo-di-pelle-3-40.png'
+import negativeLogo from '../public/icons8-pila-di-foto-50.png'
+import metropolitanLogo from '../public/icons8-grattacieli-100.png'
+import sunnyLogo from '../public/icons8-sun-star-100.png'
+import animalistLogo from '../public/icons8-animali-selvatici-48.png'
 const firstFont = Shadows_Into_Light({
   subsets: ['latin'],
   weight: ['400'],
@@ -238,6 +262,13 @@ export default function Home() {
     })
     message.success('Style selected')
   }
+  const selectDark = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: 'dark',
+    })
+    message.success('Style selected')
+  }
 
   return (
     <div className="pt-20 min-h-[200vh] bg-indigo-800 justify-center items-center text-center">
@@ -315,168 +346,332 @@ export default function Home() {
             <div className="grid grid-cols-2">
               <div>
                 <div>
-                  <h3
-                    onClick={selectFuturistic}
-                    className="border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Futuristic
-                  </h3>
-                  <h3
-                    onClick={selectNatural}
-                    className="border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Anime
-                  </h3>
-                  <h3
-                    onClick={select2d}
-                    className="pb-13 border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    2d
-                  </h3>
-                  <h3
-                    onClick={select3d}
-                    className="border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    3d
-                  </h3>
-                  <h3
-                    onClick={selectCybernetic}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Cybernetic
-                  </h3>
-                  <h3
-                    onClick={selectLandscape}
-                    className="pb-13  border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Landscape
-                  </h3>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectFuturistic}>Futuristic</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={futuramaLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
 
-                  <h3
-                    onClick={selectFloral}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Floral
-                  </h3>
-                  <h3
-                    onClick={selectPunk}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Punk
-                  </h3>
-                  <h3
-                    onClick={selectWhiteBlack}
-                    className="pb-13  border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    White & Black
-                  </h3>
-                  <h3
-                    onClick={selectBloody}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Bloody
-                  </h3>
-                  <h3
-                    onClick={selectTech}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Tech
-                  </h3>
-                  <h3
-                    onClick={selectTropical}
-                    className="pb-13 border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Tropical
-                  </h3>
-                  <h3
-                    onClick={selectNatural}
-                    className="pb-13 rounded-b-xl border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Natural
-                  </h3>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectNatural}>Natural</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={naturalLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border- border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={select2d}>2d</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={duedLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={select3d}>3d</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={tredLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectCybernetic}>Cybernetic</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={cyberneticLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectLandscape}>Landscape</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={landscapeLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectFloral}>Floral</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={floralLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectPunk}>Punk</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={punkLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectWhiteBlack}>White&Black</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={whiteblackLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectBloody}>Bloody</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={bloodyLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectTech}>BloodyTech </h3>{' '}
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={techLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectTropical}>Tropical</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={tropicalLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectNatural}>Natural</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={naturalLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
                 <div>
-                  <h3
-                    onClick={selectPortrait}
-                    className="border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Portrait
-                  </h3>
-                  <h3
-                    onClick={selectPainting}
-                    className="border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Painting
-                  </h3>
-                  <h3
-                    onClick={selectMosaic}
-                    className="pb-13 border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Mosaic
-                  </h3>
-                  <h3
-                    onClick={selectCartoon}
-                    className="border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Cartoon
-                  </h3>
-                  <h3
-                    onClick={selectMusical}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Musical
-                  </h3>
-                  <h3
-                    onClick={selectEvergreen}
-                    className="pb-13  border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Evergreen
-                  </h3>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectPortrait}>Portrait</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={portraitLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
 
-                  <h3
-                    onClick={selectMusical}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Musical
-                  </h3>
-                  <h3
-                    onClick={selectSmile}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Smile
-                  </h3>
-                  <h3
-                    onClick={selectOld}
-                    className="pb-13  border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Old
-                  </h3>
-                  <h3
-                    onClick={selectNegative}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Negative
-                  </h3>
-                  <h3
-                    onClick={selectAnimalist}
-                    className=" border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Animalist
-                  </h3>
-                  <h3
-                    onClick={selectMetropolitan}
-                    className="pb-13 border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Metropolitan
-                  </h3>
-                  <h3
-                    onClick={selectSunny}
-                    className="pb-13 rounded-b-xl border border-solid border-black hover:border-green-300 hover:bg-black hover:text-orange-300 cursor-pointer"
-                  >
-                    Sunny
-                  </h3>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectPainting}>Painting</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={paintingLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectMosaic}>Mosaic</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={mosaicLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectCartoon}>Cartoon</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={cartoonLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectMusical}>Musical</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={musicalLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectNatural}>Natural</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={naturalLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectDark}>Dark</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={darkLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectSmile}>Smile</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={smileLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectOld}>Old</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={oldLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectNegative}>Negative</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={negativeLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectAnimalist}>Animalist</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={animalistLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectMetropolitan}>Metropolitan</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={metropolitanLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectSunny}>Sunny</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={sunnyLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

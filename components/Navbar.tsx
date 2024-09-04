@@ -9,7 +9,7 @@ import { AiOutlineProfile } from 'react-icons/ai'
 import { useRouter } from 'next/navigation'
 import { useUser } from '@auth0/nextjs-auth0/client'
 import Loader from './Loader'
-
+import { FaCircleUser } from 'react-icons/fa6'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const [visible, setVisible] = useState(true)
@@ -90,7 +90,7 @@ const Navbar = () => {
                 onClick={() => router.push('/profile')}
                 className="flex flex-row cursor-pointer bg-transparent p-2 link link-underline link-underline-black hover:text-indigo-500 hover:bg-slate-200 hover:rounded-lg"
               >
-                <AiOutlineProfile className="my-auto mr-1" />
+                <FaCircleUser className="my-auto mr-1" />
                 <h1 className="my-auto">Profile</h1>
               </li>
             </div>
@@ -170,7 +170,7 @@ const Navbar = () => {
               className="ml-4 mb-4 bg-indigo-800 w-fit rounded-full"
             >
               <li className=" flex flex-row cursor-pointer bg-transparent text-orange-300 p-2 hover:underline hover:bg-gray-300 hover:p-2 hover:rounded-full hover:text-green-600 w-fit">
-                <GiLongAntennaeBug className="my-auto mr-1" />
+                <FaCircleUser className="my-auto mr-1" />
                 Profile
               </li>
             </div>
