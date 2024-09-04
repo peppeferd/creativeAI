@@ -476,7 +476,7 @@ export default function Home() {
                   </div>
                   <div className="flex flex-row justify-center items-center">
                     <div className="flex flex-row border border-solid border-t-0 border-x-0 border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
-                      <h3 onClick={selectTech}>BloodyTech </h3>{' '}
+                      <h3 onClick={selectTech}>Tech </h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={techLogo}
