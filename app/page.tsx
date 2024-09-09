@@ -35,6 +35,7 @@ import negativeLogo from '../public/icons8-pila-di-foto-50.png'
 import metropolitanLogo from '../public/icons8-grattacieli-100.png'
 import sunnyLogo from '../public/icons8-sun-star-100.png'
 import animalistLogo from '../public/icons8-animali-selvatici-48.png'
+import openImage from '../public/icons8-link-esterno-80.png'
 const firstFont = Shadows_Into_Light({
   subsets: ['latin'],
   weight: ['400'],
@@ -79,7 +80,12 @@ export default function Home() {
         console.log(err)
       })
   }
-
+  function download() {
+    const URL = immagine
+    if (typeof window !== 'undefined') {
+      window.location.href = URL
+    }
+  }
   const selectFuturistic = () => {
     setPostPrompt({
       ...postPrompt,
@@ -690,6 +696,19 @@ export default function Home() {
             alt="imm"
             src={immagine === '' ? picdefault : immagine}
           />
+          {immagine && (
+            <div className="w-fit mx-auto">
+              <a href={immagine} download={immagine} target="_blank">
+                <Image
+                  className="rounded-lg mt-10 bg-white mx-auto"
+                  src={openImage}
+                  alt=""
+                  width={50}
+                  height={50}
+                />
+              </a>
+            </div>
+          )}
           <h1 className="my-5 text-3xl text-white">
             After generated, choose your prefered image size:
           </h1>
