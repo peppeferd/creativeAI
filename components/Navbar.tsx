@@ -130,7 +130,9 @@ const Navbar = () => {
                     Login/Sign-up with
                   </a>
                   <div className="bg-white p-1 ml-2 rounded-full">
-                    <FcGoogle />
+                    <a href="/api/auth/login">
+                      <FcGoogle />
+                    </a>
                   </div>
                 </div>
               )}
@@ -204,7 +206,9 @@ const Navbar = () => {
                     Login/Sign-up with
                   </a>
                   <div className="bg-white rounded-full p-1 ml-1">
-                    <FcGoogle />
+                    <a href="/api/auth/login">
+                      <FcGoogle />
+                    </a>
                   </div>
                 </div>
               )}
