@@ -1,7 +1,7 @@
 import React from 'react'
 export const metadata = {
-  title: 'Creative AI',
-  description: 'Creative AI - Contact',
+  title: 'Image Drop AI',
+  description: 'Image Drop AI - Contact',
 }
 
 const layout = ({ children }: { children: React.ReactNode }) => {
