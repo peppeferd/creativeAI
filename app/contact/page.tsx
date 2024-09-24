@@ -11,7 +11,7 @@ const Contact = () => {
       <h1
         className={`${secondFont.className} text-5xl text-center bg-blue-700 text-white w-fit mx-auto p-6 rounded-full`}
       >
-        Contact me
+        Contact us
       </h1>
       <div>
         <Contactoo />
