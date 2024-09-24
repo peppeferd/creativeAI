@@ -71,7 +71,7 @@ const Navbar = () => {
               onClick={() => router.push('/')}
               className="rounded-full p-3 text-xl font-bold cursor-pointer"
             >
-              Creative AI
+              Image Drop AI
             </h1>
           </div>
           {/* Desktop Navigation */}
@@ -82,7 +82,7 @@ const Navbar = () => {
                 className="flex flex-row cursor-pointer bg-transparent p-2 link link-underline link-underline-black hover:text-indigo-500 hover:bg-slate-200 hover:rounded-lg"
               >
                 <IoCreate className="my-auto mr-1 " />
-                <h1 className="my-auto">Home - Create</h1>
+                <h1 className="my-auto">Create</h1>
               </li>
             </div>
             <div>
