@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation'
 import { useUser } from '@auth0/nextjs-auth0/client'
 import Loader from './Loader'
 import { FaCircleUser } from 'react-icons/fa6'
+import { FcGoogle } from 'react-icons/fc'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const [visible, setVisible] = useState(true)
@@ -113,7 +114,7 @@ const Navbar = () => {
                 <h1 className="my-auto">Contact</h1>
               </li>
             </div>
-            <div className="mt-[7px]">
+            <div className="my-auto">
               {user ? (
                 <div>
                   <a
@@ -124,13 +125,13 @@ const Navbar = () => {
                   </a>
                 </div>
               ) : (
-                <div>
-                  <a
-                    className="btn bg-indigo-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static"
-                    href="/api/auth/login"
-                  >
-                    Login
+                <div className="flex flex-row bg-indigo-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static">
+                  <a className="btn" href="/api/auth/login">
+                    Login/Sign-up with
                   </a>
+                  <div className="bg-white p-1 ml-2 rounded-full">
+                    <FcGoogle />
+                  </div>
                 </div>
               )}
             </div>
@@ -198,13 +199,13 @@ const Navbar = () => {
                   </a>
                 </div>
               ) : (
-                <div className="text-center">
-                  <a
-                    className="btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static"
-                    href="/api/auth/login"
-                  >
-                    Login
+                <div className="flex flex-row justify-center bg-indigo-600 text-white md:ml-8 font-semibold px-1 py-1 rounded duration-500 md:static">
+                  <a className="btn" href="/api/auth/login">
+                    Login/Sign-up with
                   </a>
+                  <div className="bg-white rounded-full p-1 ml-1">
+                    <FcGoogle />
+                  </div>
                 </div>
               )}
             </div>
