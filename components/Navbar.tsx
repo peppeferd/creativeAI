@@ -143,7 +143,7 @@ const Navbar = () => {
                   <a className="btn" href="/api/auth/login">
                     Login/Sign-up
                   </a>
-                  <div className=" p-1 ml-2 rounded-full">
+                  <div className=" p-1 rounded-full">
                     <a href="/api/auth/login">
                       <IoMdLogIn />
                     </a>
