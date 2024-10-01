@@ -11,10 +11,17 @@ import { useUser } from '@auth0/nextjs-auth0/client'
 import Loader from './Loader'
 import { FaCircleUser } from 'react-icons/fa6'
 import { FcGoogle } from 'react-icons/fc'
+import { BiCoin } from 'react-icons/bi'
+import { useRecoilState } from 'recoil'
+import { profileAtom } from '@/atoms/profileAtom'
+import { IoMdLogIn } from 'react-icons/io'
+
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const [visible, setVisible] = useState(true)
   const router = useRouter()
+  const [profile, setProfile] = useRecoilState(profileAtom)
+
   const [isClient, setIsClient] = useState(false)
   const navigateToHome = () => {
     router.push('/')
@@ -49,32 +56,39 @@ const Navbar = () => {
             visible ? 'top-0' : 'hidden'
           } `}
         >
+          <div className="flex flex-row mr-2 md:mr-[500px] gap-6 md:gap-48">
+            <div className="flex items-center  gap-1">
+              <BiCoin /> <span className="hidden md:block">Credits:</span>
+              {profile.credits}
+            </div>
+
+            <div className="flex flex-row bg-indigo-800 text-orange-300 my-1 p-1 rounded-full">
+              <svg
+                onClick={() => router.push('/')}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="size-11  ml-2 bg-indigo-500 rounded-xl "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
+                />
+              </svg>
+
+              <h1
+                onClick={() => router.push('/')}
+                className="rounded-full p-3 text-base font-bold cursor-pointer w-full"
+              >
+                Image Drop AI
+              </h1>
+            </div>
+          </div>
           {/* Logo */}
 
-          <div className="flex flex-row bg-indigo-800 text-orange-300 my-1 p-1 rounded-full">
-            <svg
-              onClick={() => router.push('/')}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="size-6 mt-3 ml-2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
-              />
-            </svg>
-
-            <h1
-              onClick={() => router.push('/')}
-              className="rounded-full p-3 text-xl font-bold cursor-pointer"
-            >
-              Image Drop AI
-            </h1>
-          </div>
           {/* Desktop Navigation */}
           <ul className="hidden md:flex text-xl gap-4">
             <div>
@@ -125,13 +139,13 @@ const Navbar = () => {
                   </a>
                 </div>
               ) : (
-                <div className="flex flex-row bg-indigo-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static">
+                <div className="flex flex-row bg-indigo-600 text-white hover:bg-indigo-500 p-2 rounded-full font-semibold ">
                   <a className="btn" href="/api/auth/login">
-                    Login/Sign-up with
+                    Login/Sign-up
                   </a>
-                  <div className="bg-white p-1 ml-2 rounded-full">
+                  <div className=" p-1 ml-2 rounded-full">
                     <a href="/api/auth/login">
-                      <FcGoogle />
+                      <IoMdLogIn />
                     </a>
                   </div>
                 </div>
@@ -201,13 +215,13 @@ const Navbar = () => {
                   </a>
                 </div>
               ) : (
-                <div className="flex flex-row justify-center bg-indigo-600 text-white md:ml-8 font-semibold px-1 py-1 rounded duration-500 md:static">
+                <div className="flex flex-row  bg-indigo-600 text-white w-fit mx-auto p-2 rounded-full">
                   <a className="btn" href="/api/auth/login">
-                    Login/Sign-up with
+                    Login/Sign-up
                   </a>
-                  <div className="bg-white rounded-full p-1 ml-1">
+                  <div className=" rounded-full p-1 ml-1">
                     <a href="/api/auth/login">
-                      <FcGoogle />
+                      <IoMdLogIn />
                     </a>
                   </div>
                 </div>

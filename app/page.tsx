@@ -11,6 +11,7 @@ import { getProfile } from '@/lib/functions'
 import { refetchCreditsAtom } from '@/atoms/flagAtom'
 import { useUser } from '@auth0/nextjs-auth0/client'
 import { generatePost } from '@/lib'
+
 import futuramaLogo from '../public/icons8-futurama-friggere-50.png'
 import naturalLogo from '../public/icons8-anime-100.png'
 import duedLogo from '../public/icons8-ciglia-2d-48.png'
@@ -332,12 +333,12 @@ export default function Home() {
                 </div>
               ) : (
                 <div className="bg-orange-300 p-4 rounded-xl mt-3">
-                  Buy some credits in the
+                  Buy some credits after the
                   <a
                     className="bg-indigo-800 text-white ml-2 p-2"
                     href="/profile"
                   >
-                    Profile section
+                    Login/SignUp
                   </a>
                 </div>
               )}
