@@ -140,14 +140,11 @@ const Navbar = () => {
                 </div>
               ) : (
                 <div className="flex flex-row text-sm w-full bg-indigo-600 text-white hover:bg-indigo-500 p-2 rounded-full font-semibold ">
-                  <a className="btn" href="/api/auth/login">
-                    Login/Sign-up
+                  <a href="/api/auth/login">Login/Sign-up</a>
+
+                  <a className="mt-1" href="/api/auth/login">
+                    <IoMdLogIn />
                   </a>
-                  <div className=" p-1 rounded-full">
-                    <a href="/api/auth/login">
-                      <IoMdLogIn />
-                    </a>
-                  </div>
                 </div>
               )}
             </div>
