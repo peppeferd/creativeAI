@@ -57,7 +57,7 @@ const Navbar = () => {
           } `}
         >
           <div className="flex flex-row mr-2 md:mr-[500px] gap-6 md:gap-48">
-            <div className="flex items-center  gap-1">
+            <div className="flex items-center gap-1">
               <BiCoin /> <span className="hidden md:block">Credits:</span>
               {profile.credits}
             </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="size-11  ml-2 bg-indigo-500 rounded-xl "
+                className="size-11 mt-3 md:mt-0 ml-2 bg-indigo-500 rounded-xl "
               >
                 <path
                   stroke-linecap="round"
@@ -81,7 +81,7 @@ const Navbar = () => {
 
               <h1
                 onClick={() => router.push('/')}
-                className="rounded-full p-3 text-base font-bold cursor-pointer w-full"
+                className="rounded-full p-3 text-sm font-bold cursor-pointer w-full"
               >
                 Image Drop AI
               </h1>
@@ -139,7 +139,7 @@ const Navbar = () => {
                   </a>
                 </div>
               ) : (
-                <div className="flex flex-row bg-indigo-600 text-white hover:bg-indigo-500 p-2 rounded-full font-semibold ">
+                <div className="flex flex-row text-sm w-full bg-indigo-600 text-white hover:bg-indigo-500 p-2 rounded-full font-semibold ">
                   <a className="btn" href="/api/auth/login">
                     Login/Sign-up
                   </a>
