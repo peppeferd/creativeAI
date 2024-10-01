@@ -139,12 +139,15 @@ const Navbar = () => {
                   </a>
                 </div>
               ) : (
-                <div className="flex flex-row text-sm w-full bg-indigo-600 text-white hover:bg-indigo-500 p-2 rounded-full font-semibold ">
-                  <a href="/api/auth/login">Login/Sign-up</a>
-
-                  <a className="mt-1" href="/api/auth/login">
-                    <IoMdLogIn />
-                  </a>
+                <div className="flex flex-row text-sm w-full bg-indigo-600 text-white hover:bg-indigo-500 p-2 rounded-full">
+                  <div>
+                    <a href="/api/auth/login">Login/Sign-up</a>
+                  </div>
+                  <div className="mt-[2px]">
+                    <a href="/api/auth/login">
+                      <IoMdLogIn />
+                    </a>
+                  </div>
                 </div>
               )}
             </div>
