@@ -354,7 +354,7 @@ export default function Home() {
               <div>
                 <div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectFuturistic}>Futuristic</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -367,7 +367,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectNatural}>Natural</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -380,7 +380,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={select2d}>2d</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -393,7 +393,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={select3d}>3d</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -406,7 +406,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectCybernetic}>Cybernetic</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -419,7 +419,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectLandscape}>Landscape</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -432,7 +432,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectFloral}>Floral</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -445,7 +445,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectPunk}>Punk</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -458,7 +458,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectWhiteBlack}>White&Black</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -470,7 +470,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectBloody}>Bloody</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -482,7 +482,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectTech}>Tech </h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -494,7 +494,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectTropical}>Tropical</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -506,7 +506,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectNatural}>Natural</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -522,7 +522,7 @@ export default function Home() {
               <div>
                 <div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectPortrait}>Portrait</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -535,7 +535,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectPainting}>Painting</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -547,7 +547,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectMosaic}>Mosaic</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -559,7 +559,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectCartoon}>Cartoon</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -571,7 +571,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectMusical}>Musical</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -583,7 +583,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectNatural}>Natural</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -596,7 +596,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectDark}>Dark</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -608,7 +608,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectSmile}>Smile</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -620,7 +620,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectOld}>Old</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -632,7 +632,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectNegative}>Negative</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -644,7 +644,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectAnimalist}>Animalist</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -656,7 +656,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectMetropolitan}>Metropolitan</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
@@ -668,7 +668,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectSunny}>Sunny</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
