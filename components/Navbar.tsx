@@ -70,7 +70,7 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="size-11 mt-3 md:mt-0 ml-2 bg-indigo-500 rounded-xl "
+                className="size-10 md:size-8 mt-3 md:mt-1 px-1 md:px-1 ml-2 bg-indigo-500 rounded-xl "
               >
                 <path
                   stroke-linecap="round"

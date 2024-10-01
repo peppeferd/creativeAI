@@ -308,7 +308,7 @@ export default function Home() {
                   </h1>
                   <Form.Item name="command" label="">
                     <textarea
-                      className="lg:w-[50vh] md:w-[40vh] w-[27vh] h-[20vh] resize-none rounded-lg text-xl tracking-widest font-extralight py-2 px-3"
+                      className="w-[97%] md:w-[40vh] h-[20vh] resize-none rounded-lg text-xl tracking-widest font-extralight py-2 px-3 "
                       onChange={(e) =>
                         setPostPrompt({
                           ...postPrompt,
