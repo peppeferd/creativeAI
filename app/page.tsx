@@ -308,7 +308,7 @@ export default function Home() {
                   </h1>
                   <Form.Item name="command" label="">
                     <textarea
-                      className="w-[97%] md:w-[40vh] h-[20vh] resize-none rounded-lg text-xl tracking-widest font-extralight py-2 px-3 "
+                      className="w-[40vh] md:w-[40vh] h-[20vh] resize-none rounded-lg text-xl tracking-widest font-extralight py-2 px-3 "
                       onChange={(e) =>
                         setPostPrompt({
                           ...postPrompt,
@@ -353,7 +353,7 @@ export default function Home() {
             <div className="grid grid-cols-2">
               <div>
                 <div>
-                  <div className="flex flex-row justify-center items-center">
+                  <div className="flex flex-row justify-center items-center py-1">
                     <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectFuturistic}>Futuristic</h3>
                       <Image
@@ -521,7 +521,7 @@ export default function Home() {
               </div>
               <div>
                 <div>
-                  <div className="flex flex-row justify-center items-center">
+                  <div className="flex flex-row justify-center items-center py-1">
                     <div className="flex flex-row rounded-full hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectPortrait}>Portrait</h3>
                       <Image
