@@ -63,7 +63,7 @@ export default function Example() {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      'bg-indigo-900 text-white',
+                      'bg-indigo-900 text-white my-1',
                       'text-gray-200 hover:bg-indigo-700 hover:text-white',
                       'rounded-md px-3 py-2 text-sm font-medium'
                     )}
