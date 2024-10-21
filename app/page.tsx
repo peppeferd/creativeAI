@@ -332,7 +332,7 @@ export default function Home() {
                   </Button>
                 </div>
               ) : (
-                <div className="bg-orange-300 p-4 rounded-xl mt-3">
+                <div className="bg-orange-500 p-4 rounded-xl mt-3">
                   Buy some credits after the
                   <a
                     className="bg-indigo-800 text-white ml-2 p-2"
