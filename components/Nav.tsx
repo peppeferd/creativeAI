@@ -53,7 +53,7 @@ export default function Example() {
               />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex  mx-auto items-center justify-center mx-auto sm:items-stretch sm:justify-start gap-11">
             {/*  <div className="flex flex-row text-white my-auto mr-3">
               <div>
                 <BiCoin className="my-1" />
@@ -64,7 +64,7 @@ export default function Example() {
               <div>:{profile?.credits}</div>
             </div> */}
 
-            <div className="flex flex-shrink-0 items-center">
+            <div className="flex flex-shrink-0 ">
               <h1
                 onClick={() => router.push('/')}
                 className={`text-center ${firstFont.className} shadow-2xl border-4 border-t-indigo-300 border-r-indigo-300 border-b-indigo-600 border-l-indigo-600 rounded-full p-1 text-xl font-bold cursor-pointer bg-transparent text-indigo-200`}
