@@ -1,236 +1,92 @@
-'use client'
-import React, { useEffect, useState } from 'react'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
-import { FaPeopleGroup, FaRegMessage } from 'react-icons/fa6'
-import { BsFileEarmarkText } from 'react-icons/bs'
-import { GiLongAntennaeBug } from 'react-icons/gi'
-import { IoCreate } from 'react-icons/io5'
-import { AiOutlineProfile } from 'react-icons/ai'
-import { useRouter } from 'next/navigation'
 import { useUser } from '@auth0/nextjs-auth0/client'
-import Loader from './Loader'
-import { FaCircleUser } from 'react-icons/fa6'
+import { useRouter } from 'next/navigation'
+import React from 'react'
 import { FcGoogle } from 'react-icons/fc'
-import { BiCoin } from 'react-icons/bi'
-import { useRecoilState } from 'recoil'
-import { profileAtom } from '@/atoms/profileAtom'
-import { IoMdLogIn } from 'react-icons/io'
+import { Permanent_Marker } from 'next/font/google'
 
+const firstFont = Permanent_Marker({
+  subsets: ['latin'],
+  weight: ['400'],
+})
 const Navbar = () => {
-  const [nav, setNav] = useState(false)
-  const [visible, setVisible] = useState(true)
-  const router = useRouter()
-  const [profile, setProfile] = useRecoilState(profileAtom)
-
-  const [isClient, setIsClient] = useState(false)
-  const navigateToHome = () => {
-    router.push('/')
-    setNav(false)
-  }
-  const navigateToProfile = () => {
-    router.push('/profile')
-    setNav(false)
-  }
-  const navigateToContact = () => {
-    router.push('/contact')
-    setNav(false)
-  }
-  const { user, error, isLoading } = useUser()
-  const handleNav = () => {
-    setNav(!nav)
-  }
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-  if (!isClient)
-    return (
+  const { user }: any = useUser()
+  const router: any = useRouter()
+  return (
+    <div>
       <div>
-        <Loader />
-      </div>
-    )
-  else
-    return (
-      <div>
-        <div
-          className={`bg-orange-300 sticky flex justify-evenly xl:text-xl md:text-xs items-center h-17 px-4 text-indigo-800 shadow-xl saliindex ${
-            visible ? 'top-0' : 'hidden'
-          } `}
-        >
-          <div className="flex flex-row mr-2 md:mr-[500px] gap-6 md:gap-48">
-            <div className="flex items-center gap-1">
-              <BiCoin /> <span className="hidden md:block">Credits:</span>
-              {profile.credits}
-            </div>
-
-            <div className="flex flex-row bg-indigo-800 text-orange-300 my-1 p-1 rounded-full">
-              <svg
-                onClick={() => router.push('/')}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="size-10 md:size-8 my-auto md:mt-auto px-1 md:px-1 ml-2 bg-indigo-500 rounded-xl "
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
-                />
-              </svg>
-
-              <h1
-                onClick={() => router.push('/')}
-                className="rounded-full p-3 text-sm font-bold cursor-pointer w-full"
-              >
-                Image Drop AI
-              </h1>
+        <div className="navbar bg-orange-500">
+          <div className="flex-1">
+            <h1
+              onClick={() => router.push('/')}
+              className={`text-center ${firstFont.className} shadow-2xl border-4 border-t-indigo-300 border-r-indigo-300 border-b-indigo-600 border-l-indigo-600 rounded-full p-3 text-xl font-bold cursor-pointer bg-transparent text-indigo-200`}
+            >
+              Image Drop AI
+            </h1>
+            <div>
+              <ul className="flex flex-row ml-5 md:ml-14 gap-11">
+                <li className="text-center bg-white text-orange-600 hover:bg-orange-400 hover:text-indigo-800 p-2 rounded-full">
+                  <a href="/about">About us</a>
+                </li>
+                <li className="text-center bg-white text-orange-600 hover:bg-orange-400 hover:text-indigo-800 p-2 rounded-full">
+                  <a href="/contact">Contact us</a>
+                </li>
+              </ul>
             </div>
           </div>
-          {/* Logo */}
 
-          {/* Desktop Navigation */}
-          <ul className="hidden md:flex text-xl gap-4">
-            <div>
-              <li
-                onClick={() => router.push('/')}
-                className="flex flex-row cursor-pointer bg-transparent p-2 link link-underline link-underline-black hover:text-indigo-500 hover:bg-slate-200 hover:rounded-lg"
-              >
-                <IoCreate className="my-auto mr-1 " />
-                <h1 className="my-auto">Create</h1>
-              </li>
-            </div>
-            <div>
-              <li
-                onClick={() => router.push('/profile')}
-                className="flex flex-row cursor-pointer bg-transparent p-2 link link-underline link-underline-black hover:text-indigo-500 hover:bg-slate-200 hover:rounded-lg"
-              >
-                <FaCircleUser className="my-auto mr-1" />
-                <h1 className="my-auto">Profile</h1>
-              </li>
-            </div>
-            {/*  <div>
-              <li
-                onClick={() => router.push('/about')}
-                className="flex flex-row cursor-pointer bg-transparent p-2 link link-underline link-underline-black hover:text-indigo-500 hover:bg-slate-200 hover:rounded-lg"
-              >
-                <FaPeopleGroup className="my-auto mr-1" />
-                <h1 className="my-auto">About</h1>
-              </li>
-            </div> */}
-
-            <div>
-              <li
-                onClick={() => router.push('/contact')}
-                className="flex flex-row cursor-pointer bg-transparent p-2 link link-underline link-underline-black hover:text-indigo-500 hover:bg-slate-200 hover:rounded-lg"
-              >
-                <FaRegMessage className="my-auto mr-1" />
-                <h1 className="my-auto">Contact</h1>
-              </li>
-            </div>
-            <div className="my-auto">
+          <div className="flex-none gap-2">
+            <div className="form-control"></div>
+            <div className="dropdown dropdown-end">
               {user ? (
                 <div>
-                  <a
-                    className="btn bg-indigo-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static"
-                    href="/api/auth/logout"
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="btn btn-ghost btn-circle avatar"
                   >
-                    Logout
-                  </a>
+                    <div className="w-10 rounded-full">
+                      <img
+                        alt="Tailwind CSS Navbar component"
+                        src={user?.picture}
+                      />
+                    </div>
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="menu menu-sm dropdown-content bg-orange-500 rounded-box z-[1] mt-3 w-52 p-2 shadow h-24 justify-center items-center gap-5"
+                  >
+                    <li className="bg-black text-yellow-200 hover:bg-yellow-300 hover:text-indigo-600 rounded-full">
+                      <a href="/profile">Profile</a>
+                    </li>
+                    <li className="bg-black text-yellow-200 hover:bg-yellow-300 hover:text-indigo-600 rounded-full">
+                      <a href="/api/auth/logout">Logout</a>
+                    </li>
+                  </ul>
                 </div>
               ) : (
-                <div className="flex flex-row text-sm w-full bg-indigo-600 text-white hover:bg-indigo-500 p-2 rounded-full">
-                  <div>
-                    <a href="/api/auth/login">Login/Sign-up</a>
-                  </div>
-                  <div className="mt-[2px]">
+                <div className="flex flex-row  text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static">
+                  <a
+                    className="btn border bg-white text-black hover:text-white hover:border-4 hover:border-black"
+                    href="/api/auth/login"
+                  >
+                    Login/Sign-up with
                     <a href="/api/auth/login">
-                      <IoMdLogIn />
+                      <FcGoogle />
                     </a>
-                  </div>
+                  </a>
+                  {/*   <div className="bg-white p-1 ml-2 my-auto rounded-full">
+                    <a href="/api/auth/login">
+                      <FcGoogle />
+                    </a>
+                  </div> */}
                 </div>
               )}
             </div>
-          </ul>
-
-          {/* Mobile Navigation Icon */}
-          <div
-            onClick={handleNav}
-            className="block md:hidden text-indigo-800 ml-16 p-3 rounded-full"
-          >
-            {nav ? <AiOutlineClose size={35} /> : <AiOutlineMenu size={35} />}
           </div>
-
-          {/* Mobile Navigation Menu */}
-          <ul
-            className={
-              nav
-                ? 'absolute md:hidden left-0 top-12 h-fit w-full ease-in-out duration-500 mt-10 flex-col bg-white bg-opacity-90 gap-7 py-5 text-xl'
-                : 'ease-in-out w-fit fixed top-0 bottom-0 left-[-100%] '
-            }
-          >
-            <h1 className="w-fit p-4 text-3xl font-bold text-orange-300 mx-auto rounded-full cursor-pointer bg-indigo-800">
-              Creative AI
-            </h1>
-
-            {/* Mobile Navigation Items */}
-            <div
-              onClick={navigateToHome}
-              className="ml-4 mb-4 mt-2 bg-indigo-800 w-fit rounded-full"
-            >
-              <li className="flex flex-row cursor-pointer bg-transparent text-orange-300 p-2 hover:underline hover:bg-gray-300 hover:p-2 hover:rounded-full hover:text-green-600 w-fit">
-                <BsFileEarmarkText className="my-auto mr-1" /> Home - Create
-              </li>
-            </div>
-            <div
-              onClick={navigateToProfile}
-              className="ml-4 mb-4 bg-indigo-800 w-fit rounded-full"
-            >
-              <li className=" flex flex-row cursor-pointer bg-transparent text-orange-300 p-2 hover:underline hover:bg-gray-300 hover:p-2 hover:rounded-full hover:text-green-600 w-fit">
-                <FaCircleUser className="my-auto mr-1" />
-                Profile
-              </li>
-            </div>
-            {/*  <div className="ml-4 mb-4 bg-indigo-800 w-fit rounded-full">
-              <li className=" flex flex-row cursor-pointer bg-transparent text-orange-300 p-2 hover:underline hover:bg-gray-300 hover:p-2 hover:rounded-full hover:text-green-600 w-fit">
-                <FaPeopleGroup className="my-auto mr-1" /> About
-              </li>
-            </div> */}
-            <div
-              onClick={navigateToContact}
-              className="ml-4 mb-4 bg-indigo-800 w-fit rounded-full"
-            >
-              <li className=" flex flex-row cursor-pointer bg-transparent text-orange-300 p-2 hover:underline hover:bg-gray-300 hover:p-2 hover:rounded-full hover:text-green-600 w-fit">
-                <FaRegMessage className="my-auto mr-1" /> Contact
-              </li>
-            </div>
-            <div className="mt-[7px]">
-              {user ? (
-                <div className="text-center">
-                  <a
-                    className="btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static"
-                    href="/api/auth/logout"
-                  >
-                    Logout
-                  </a>
-                </div>
-              ) : (
-                <div className="flex flex-row  bg-indigo-600 text-white w-fit mx-auto p-2 rounded-full">
-                  <a className="btn" href="/api/auth/login">
-                    Login/Sign-up
-                  </a>
-                  <div className=" rounded-full p-1 ml-1">
-                    <a href="/api/auth/login">
-                      <IoMdLogIn />
-                    </a>
-                  </div>
-                </div>
-              )}
-            </div>
-          </ul>
         </div>
       </div>
-    )
+    </div>
+  )
 }
 
 export default Navbar

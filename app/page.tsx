@@ -288,7 +288,7 @@ export default function Home() {
       </head>
       <div className="mx-2">
         <h1
-          className={`bg-orange-300 text-3xl text-indigo-800 p-4 rounded-2xl w-fit mb-16 mx-auto text-center ${firstFont.className}`}
+          className={`bg-orange-400 text-3xl text-indigo-800 p-4 rounded-2xl w-fit mb-16 mx-auto text-center ${firstFont.className}`}
         >
           Create your own AI generated HD image
         </h1>
@@ -308,7 +308,7 @@ export default function Home() {
                   </h1>
                   <Form.Item name="command" label="">
                     <textarea
-                      className="w-[40vh] md:w-[40vh] h-[20vh] resize-none rounded-lg text-xl tracking-widest font-extralight py-2 px-3 "
+                      className="w-[40vh] md:w-[40vh] h-[20vh] resize-none rounded-lg text-xl tracking-widest font-extralight py-2 px-3 bg-white"
                       onChange={(e) =>
                         setPostPrompt({
                           ...postPrompt,
