@@ -22,7 +22,7 @@ const Navbar = () => {
             >
               Image Drop AI
             </h1>
-            <div>
+            {/*    <div>
               <ul className="flex flex-row ml-5 md:ml-14 gap-11">
                 <li className="text-center bg-white text-orange-600 hover:bg-orange-400 hover:text-indigo-800 p-2 rounded-full">
                   <a href="/about">About us</a>
@@ -31,7 +31,7 @@ const Navbar = () => {
                   <a href="/contact">Contact us</a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex-none gap-2">
