@@ -1,3 +1,4 @@
+import { profileAtom } from '@/atoms/profileAtom'
 import { useUser } from '@auth0/nextjs-auth0/client'
 import {
   Disclosure,
@@ -12,6 +13,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Permanent_Marker } from 'next/font/google'
 import { useRouter } from 'next/navigation'
 import { FcGoogle } from 'react-icons/fc'
+import { useRecoilState } from 'recoil'
+import { BiCoin } from 'react-icons/bi'
 const firstFont = Permanent_Marker({
   subsets: ['latin'],
   weight: ['400'],
@@ -28,6 +31,9 @@ function classNames(...classes: any) {
 export default function Example() {
   const { user }: any = useUser()
   const router: any = useRouter()
+
+  const [profile, setProfile] = useRecoilState(profileAtom)
+
   return (
     <Disclosure as="nav" className="bg-orange-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -48,6 +54,16 @@ export default function Example() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            {/*  <div className="flex flex-row text-white my-auto mr-3">
+              <div>
+                <BiCoin className="my-1" />
+              </div>
+              <div className="xs:hidden">
+                <h1>Credits</h1>
+              </div>
+              <div>:{profile?.credits}</div>
+            </div> */}
+
             <div className="flex flex-shrink-0 items-center">
               <h1
                 onClick={() => router.push('/')}
@@ -73,54 +89,6 @@ export default function Example() {
                 ))}
               </div>
             </div>
-          </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            {/* Profile dropdown */}
-            {user ? (
-              <Menu as="div" className="relative ml-3">
-                <div>
-                  <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">Open user menu</span>
-                    <img
-                      alt=""
-                      src={user?.picture}
-                      className="h-8 w-8 rounded-full"
-                    />
-                  </MenuButton>
-                </div>
-                <MenuItems
-                  transition
-                  className="text-center absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-300 py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                >
-                  <MenuItem>
-                    <a
-                      href="/profile"
-                      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                    >
-                      Profile
-                    </a>
-                  </MenuItem>
-                  <MenuItem>
-                    <a
-                      href="/api/auth/logout"
-                      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                    >
-                      Logout
-                    </a>
-                  </MenuItem>
-                </MenuItems>
-              </Menu>
-            ) : (
-              <div className="flex flex-row bg-indigo-500 p-4 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static">
-                <a href="/api/auth/login">Login/Sign-up with</a>
-                <div className="bg-white p-1 ml-2 my-auto rounded-full">
-                  <a href="/api/auth/login">
-                    <FcGoogle />
-                  </a>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>
