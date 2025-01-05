@@ -281,11 +281,6 @@ export default function Home() {
 
   return (
     <div className="pt-20 min-h-[200vh] bg-indigo-800 justify-center items-center text-center">
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088214308316238"
-        crossOrigin="anonymous"
-      />
       <title>Image Drop AI - Home</title>
       <head>
         <meta

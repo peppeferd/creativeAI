@@ -30,11 +30,6 @@ export default withPageAuthRequired(function Page() {
   }
   return (
     <section className="w-full flex flex-col items-center bg-indigo-800 min-h-screen">
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088214308316238"
-        crossOrigin="anonymous"
-      />
       <section className="w-[95%] max-w-4xl flex flex-col items-center gap-4">
         <h1 className="text-4xl font-bold text-center mt-4 text-indigo-200">
           Profile
