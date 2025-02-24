@@ -37,6 +37,11 @@ import metropolitanLogo from "../public/icons8-grattacieli-100.png";
 import sunnyLogo from "../public/icons8-sun-star-100.png";
 import animalistLogo from "../public/icons8-animali-selvatici-48.png";
 import openImage from "../public/icons8-link-esterno-80.png";
+import romanianFlag from "../public/flag.png";
+import italianflag from "../public/italy.png";
+import cloudyStyle from "../public/cloud.png";
+import restingStyle from "../public/sleeping.png";
+import sportStyle from "../public/sports.png";
 import Script from "next/script";
 const firstFont = Shadows_Into_Light({
   subsets: ["latin"],
@@ -559,7 +564,7 @@ export default function Home() {
                       <h3 onClick={selectItalian}>Italian</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={naturalLogo}
+                        src={italianflag}
                         alt=""
                         width={20}
                         height={20}
@@ -571,7 +576,7 @@ export default function Home() {
                       <h3 onClick={selectRomanian}>Romanian</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={naturalLogo}
+                        src={romanianFlag}
                         alt=""
                         width={20}
                         height={20}
@@ -648,7 +653,7 @@ export default function Home() {
                       <h3 onClick={selectSporty}>Sporty</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={naturalLogo}
+                        src={sportStyle}
                         alt=""
                         width={20}
                         height={20}
@@ -745,7 +750,7 @@ export default function Home() {
                       <h3 onClick={selectCloudy}>Cloudy</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={sunnyLogo}
+                        src={cloudyStyle}
                         alt=""
                         width={20}
                         height={20}
@@ -757,7 +762,7 @@ export default function Home() {
                       <h3 onClick={selectResting}>Resting</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={sunnyLogo}
+                        src={restingStyle}
                         alt=""
                         width={20}
                         height={20}
