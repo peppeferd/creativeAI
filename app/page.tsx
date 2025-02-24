@@ -278,6 +278,41 @@ export default function Home() {
     });
     message.success("Style selected");
   };
+  const selectSporty = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "sporty",
+    });
+    message.success("Style selected");
+  };
+  const selectResting = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "resting",
+    });
+    message.success("Style selected");
+  };
+  const selectCloudy = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "cloudy",
+    });
+    message.success("Style selected");
+  };
+  const selectItalian = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "italian",
+    });
+    message.success("Style selected");
+  };
+  const selectRomanian = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "romanian",
+    });
+    message.success("Style selected");
+  };
 
   return (
     <div className="pt-20 min-h-[200vh] bg-indigo-800 justify-center items-center text-center">
@@ -370,7 +405,7 @@ export default function Home() {
 
                   <div className="flex flex-row justify-center items-center">
                     <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
-                      <h3 onClick={selectNatural}>Natural</h3>
+                      <h3 onClick={selectAnime}>Anime</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={naturalLogo}
@@ -519,6 +554,30 @@ export default function Home() {
                       />
                     </div>
                   </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
+                      <h3 onClick={selectItalian}>Italian</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={naturalLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
+                      <h3 onClick={selectRomanian}>Romanian</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={naturalLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
@@ -586,7 +645,7 @@ export default function Home() {
                   </div>
                   <div className="flex flex-row justify-center items-center">
                     <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
-                      <h3 onClick={selectNatural}>Natural</h3>
+                      <h3 onClick={selectSporty}>Sporty</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={naturalLogo}
@@ -672,6 +731,30 @@ export default function Home() {
                   <div className="flex flex-row justify-center items-center">
                     <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
                       <h3 onClick={selectSunny}>Sunny</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={sunnyLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectCloudy}>Cloudy</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={sunnyLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectResting}>Resting</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={sunnyLogo}
