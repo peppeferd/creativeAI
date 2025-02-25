@@ -42,6 +42,8 @@ import italianflag from "../public/italy.png";
 import cloudyStyle from "../public/cloud.png";
 import restingStyle from "../public/sleeping.png";
 import sportStyle from "../public/sports.png";
+import fruitStyle from "../public/fruits.png";
+import smokyStyle from "../public/smoke.png";
 import Script from "next/script";
 const firstFont = Shadows_Into_Light({
   subsets: ["latin"],
@@ -318,6 +320,20 @@ export default function Home() {
     });
     message.success("Style selected");
   };
+  const selectFruitful = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "fruitful",
+    });
+    message.success("Style selected");
+  };
+  const selectSmoky = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "smoky",
+    });
+    message.success("Style selected");
+  };
 
   return (
     <div className="pt-20 min-h-[200vh] bg-indigo-800 justify-center items-center text-center">
@@ -388,7 +404,7 @@ export default function Home() {
           </div>
           <div className="bg-orange-100 text-green-600 h-full xl:w-[70vh] w-[40vh] rounded-xl">
             <h1
-              className={`text-center text-2xl bg-indigo-500 py-7 text-white rounded-t-lg ${secondFont.className}`}
+              className={`text-center text-2xl bg-indigo-500 py-3 text-white rounded-t-lg ${secondFont.className}`}
             >
               Choose style
             </h1>
@@ -583,6 +599,18 @@ export default function Home() {
                       />
                     </div>
                   </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
+                      <h3 onClick={selectSmoky}>Smoky</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={smokyStyle}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
@@ -763,6 +791,18 @@ export default function Home() {
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={restingStyle}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectFruitful}>Fruitful</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={fruitStyle}
                         alt=""
                         width={20}
                         height={20}
