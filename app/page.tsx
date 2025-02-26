@@ -44,6 +44,8 @@ import restingStyle from "../public/sleeping.png";
 import sportStyle from "../public/sports.png";
 import fruitStyle from "../public/fruits.png";
 import smokyStyle from "../public/smoke.png";
+import grassyStyle from "../public/ecological.png";
+import woodyStyle from "../public/bark.png";
 import Script from "next/script";
 const firstFont = Shadows_Into_Light({
   subsets: ["latin"],
@@ -521,7 +523,7 @@ export default function Home() {
                       <h3 onClick={selectWoody}>Woody</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={floralLogo}
+                        src={woodyStyle}
                         alt=""
                         width={20}
                         height={20}
@@ -745,7 +747,7 @@ export default function Home() {
                       <h3 onClick={selectGrassy}>Grassy</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={smileLogo}
+                        src={grassyStyle}
                         alt=""
                         width={20}
                         height={20}
