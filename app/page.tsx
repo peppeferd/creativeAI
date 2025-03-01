@@ -46,6 +46,8 @@ import fruitStyle from "../public/fruits.png";
 import smokyStyle from "../public/smoke.png";
 import grassyStyle from "../public/ecological.png";
 import woodyStyle from "../public/bark.png";
+import lightStyle from "../public/light-bulb.png";
+import celestialStyle from "../public/heaven.png";
 import Script from "next/script";
 const firstFont = Shadows_Into_Light({
   subsets: ["latin"],
@@ -654,6 +656,18 @@ export default function Home() {
                       />
                     </div>
                   </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
+                      <h3 onClick={selectLight}>Light</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={lightStyle}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
@@ -858,6 +872,18 @@ export default function Home() {
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={fruitStyle}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
+                      <h3 onClick={selectCelestial}>Celestial</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={celestialStyle}
                         alt=""
                         width={20}
                         height={20}
