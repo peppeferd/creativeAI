@@ -350,6 +350,20 @@ export default function Home() {
     });
     message.success("Style selected");
   };
+  const selectCelestial = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "celestial",
+    });
+    message.success("Style selected");
+  };
+  const selectLight = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "light",
+    });
+    message.success("Style selected");
+  };
 
   return (
     <div className="pt-20 min-h-[200vh] bg-indigo-800 justify-center items-center text-center">
