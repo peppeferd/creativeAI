@@ -48,7 +48,11 @@ import grassyStyle from "../public/ecological.png";
 import woodyStyle from "../public/bark.png";
 import lightStyle from "../public/light-bulb.png";
 import celestialStyle from "../public/heaven.png";
+import lunaticStyle from "../public/atro.png";
+import lovelyStyle from "../public/heart-icon_34407.png";
+
 import Script from "next/script";
+
 const firstFont = Shadows_Into_Light({
   subsets: ["latin"],
   weight: ["400"],
@@ -366,6 +370,20 @@ export default function Home() {
     });
     message.success("Style selected");
   };
+  const selectLovely = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "lovely",
+    });
+    message.success("Style selected");
+  };
+  const selectLunatic = () => {
+    setPostPrompt({
+      ...postPrompt,
+      style: "lunatic",
+    });
+    message.success("Style selected");
+  };
 
   return (
     <div className="pt-20 min-h-[200vh] bg-indigo-800 justify-center items-center text-center">
@@ -462,6 +480,18 @@ export default function Home() {
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={naturalLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
+                      <h3 onClick={selectLunatic}>Lunatic</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={lunaticStyle}
                         alt=""
                         width={20}
                         height={20}
@@ -691,6 +721,18 @@ export default function Home() {
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={paintingLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row rounded-full border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer">
+                      <h3 onClick={selectLovely}>Lovely</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={lovelyStyle}
                         alt=""
                         width={20}
                         height={20}
