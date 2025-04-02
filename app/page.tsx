@@ -387,7 +387,7 @@ export default function Home() {
 
   return (
     <div className="pt-20 min-h-[200vh] bg-indigo-800 justify-center items-center text-center">
-      <title>Image Drop AI - Home</title>
+      <title>Image Drop AI - Homepage</title>
       <head>
         <meta
           property="og:image"
