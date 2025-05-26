@@ -964,7 +964,7 @@ export default function Home() {
             </div>
           )}
           <h1 className="my-5 text-3xl text-white">
-            After generated, choose your favorite image size:
+            After generated, choose your own favorite image size:
           </h1>
           <div className="flex flex-wrap gap-6 justify-center">
             <button
