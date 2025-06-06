@@ -11,7 +11,10 @@ import { getProfile } from "@/lib/functions";
 import { refetchCreditsAtom } from "@/atoms/flagAtom";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { generatePost } from "@/lib";
-
+import fabulousLogo from '../public/stars.png'
+import relaxingLogo from '../public/sunbathing.png'
+import sonorousLogo from '../public/note.png'
+import noisyLogo from '../public/noisy.png'
 import futuramaLogo from "../public/icons8-futurama-friggere-50.png";
 import naturalLogo from "../public/icons8-anime-100.png";
 import duedLogo from "../public/icons8-ciglia-2d-48.png";
@@ -522,7 +525,7 @@ export default function Home() {
                       <h3 onClick={selectFabulous}>Fabulous</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={darkLogo}
+                        src={fabulousLogo}
                         alt=""
                         width={20}
                         height={20}
@@ -598,7 +601,7 @@ export default function Home() {
                       <h3 onClick={selectNoisy}>Noisy</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={landscapeLogo}
+                        src={noisyLogo}
                         alt=""
                         width={20}
                         height={20}
@@ -861,7 +864,7 @@ export default function Home() {
                       <h3 onClick={selectSonorous}>Sonorous</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={darkLogo}
+                        src={sonorousLogo}
                         alt=""
                         width={20}
                         height={20}
@@ -933,7 +936,7 @@ export default function Home() {
                       <h3 onClick={selectRelaxing}>Relaxing</h3>
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
-                        src={landscapeLogo}
+                        src={relaxingLogo}
                         alt=""
                         width={20}
                         height={20}
