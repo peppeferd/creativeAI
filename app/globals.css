@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.saliindex {
+  z-index: 99 !important;
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#1d12e4, #1d12e4);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#1d12e4, #1d12e4);
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: #ffffff;
+  border: 2px solid;
+  box-sizing: border-box;
+  position: relative;
+  transform-origin: left;
+  animation: l2 1s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  margin: auto;
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid;
+  box-sizing: content-box;
+  transform-origin: 50% calc(100% - 4px);
+  animation: inherit;
+}
+.loader::after {
+  inset: auto 0 calc(100% + 2px);
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  transform-origin: 50% calc(200% - 2px);
+}
+@keyframes l2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
