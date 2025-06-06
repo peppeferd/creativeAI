@@ -741,18 +741,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                   <div className="flex flex-row justify-center items-center">
-                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
-                      <h3 onClick={selectRelaxing}>Relaxing</h3>
-                      <Image
-                        className="text-yellow-200 hover:text-orange-300"
-                        src={landscapeLogo}
-                        alt=""
-                        width={20}
-                        height={20}
-                      />
-                    </div>
-                  </div>
+                   
                   <div className="flex flex-row justify-center items-center">
                     <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
                       <h3 onClick={selectLight}>Light</h3>
@@ -933,6 +922,18 @@ export default function Home() {
                       <Image
                         className="text-yellow-200 hover:text-orange-300"
                         src={animalistLogo}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row  border-black hover:border-green-300 hover:bg-yellow-700 hover:text-white cursor-pointer rounded-full">
+                      <h3 onClick={selectRelaxing}>Relaxing</h3>
+                      <Image
+                        className="text-yellow-200 hover:text-orange-300"
+                        src={landscapeLogo}
                         alt=""
                         width={20}
                         height={20}
