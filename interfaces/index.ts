@@ -11,11 +11,11 @@ interface Style {
   value: string
 }
 
-interface Chele {
+interface Bho {
   valore: number
 }
 
-interface CustomersImages {
+interface Boh {
   name: string
   subid: string
   email: string
