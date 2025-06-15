@@ -11,7 +11,7 @@ interface Style {
   value: string
 }
 
-interface altezza {
+interface Chele {
   valore: number
 }
 
