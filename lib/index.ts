@@ -8,7 +8,7 @@ export async function generatePost(postPrompt: PostPrompt) {
   })
 }
 
-export async function saveImage(postImage: CustomersImages) {
+export async function saveImage(postImage: Boh) {
   return await fetch('/api/userimages', {
     method: 'POST',
     headers: {
