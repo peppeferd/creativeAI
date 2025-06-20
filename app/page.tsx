@@ -480,7 +480,7 @@ export default function Home() {
                     className="bg-indigo-800 text-white ml-2 p-2"
                     href="/profile"
                   >
-                    Login/Signup
+                    Login/Sign-up
                   </a>
                 </div>
               )}
