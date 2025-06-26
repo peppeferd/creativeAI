@@ -11,7 +11,7 @@ interface Style {
   value: string
 }
 
-interface Bho {
+interface Albino {
   valore: number
 }
 
