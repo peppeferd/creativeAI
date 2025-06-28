@@ -11,7 +11,7 @@ interface Style {
   value: string
 }
 
-interface Albino {
+interface Marito {
   valore: number
 }
 
