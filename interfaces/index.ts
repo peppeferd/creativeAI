@@ -15,7 +15,7 @@ interface Marito {
   valore: number
 }
 
-interface Boh {
+interface Due {
   name: string
   subid: string
   email: string
