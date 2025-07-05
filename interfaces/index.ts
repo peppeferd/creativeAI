@@ -11,7 +11,7 @@ interface Style {
   value: string
 }
 
-interface Marito {
+interface Trump {
   valore: number
 }
 
